@@ -1,0 +1,291 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'MuseoModerno', cursive;
+}
+
+:root {
+    --text-color: #000000;
+    --bg-color: #95daf7;
+    --main-color: #f29494;
+    --second-color: #537080;
+    --dark-blue: #0a3d91; /* Novo: Azul escuro */
+    --big-font: 5.5rem;
+    --p-font: 1rem;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Estilos do cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 27px 9%;
+    transition: all 0.55s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.logo i {
+    vertical-align: middle;
+    color: var(--main-color);
+    font-size: 35px;
+    margin-right: 5px;
+}
+
+.Links {
+    display: flex;
+}
+
+.Links a {
+    font-size: var(--p-font);
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 0 35px;
+    transition: all ease 0.55s;
+}
+
+.Links a:hover {
+    color: var(--main-color);
+}
+
+.Links a.active {
+    color: var(--main-color);
+}
+
+.h-main {
+    display: flex;
+    align-items: center;
+}
+
+.h-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    color: var(--bg-color);
+    background: var(--main-color);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    margin-right: 20px;
+    transition: all 0.55s ease;
+}
+
+.h-btn:hover {
+    background: transparent;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+}
+
+#menu-icon {
+    font-size: 40px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    margin: 15px;
+    display: none;
+}
+
+#darkmode {
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+/* Estilos da seção hero */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-img {
+    height: 400px; /* Alterado: Reduzindo a altura da imagem */
+    width: 400px; /* Alterado: Reduzindo a largura da imagem */
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hero-in {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.hero-text h4 {
+    margin: 5px 0 20px;
+    color: var(--main-color);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.hero-text p {
+    color: var(--text-color);
+    font-size: calc(var(--p-font) - 2px); /* Alterado: Reduzindo o tamanho da fonte */
+    font-weight: 500;
+    line-height: 24px; /* Alterado: Reduzindo o espaçamento entre linhas */
+    max-width: 500px; /* Alterado: Ajustando a largura máxima */
+    margin-bottom: 3rem; /* Alterado: Reduzindo a margem inferior */
+}
+
+.box {
+    background: var(--second-color);
+    padding: 25px 40px;
+    border-radius: 1rem;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    transition: all 0.55s ease;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.box h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.box h5 {
+    color: var(--main-color);
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.box:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* Estilos em modo escuro */
+body.dark-mode {
+    --text-color: #ffffff;
+    --bg-color: #08162a;
+    --second-color: #2b3544;
+}
+
+/* Estilos da seção sobre */
+.about {
+    padding: 80px 12%; /* Alterado: Reduzindo o padding superior e inferior */
+    background-color: var(--dark-blue); /* Alterado: Mudando a cor de fundo */
+    text-align: center;
+    color: #fff; /* Alterado: Mudando a cor do texto */
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    margin-bottom: 40px;
+    max-width: 700px; /* Novo: Ajustando a largura máxima */
+    margin: auto; /* Novo: Centralizando o texto */
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img {
+    flex: 1;
+    margin-right: 20px; /* Novo: Adicionando margem à direita da imagem */
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    margin-left: 20px; /* Novo: Adicionando margem à esquerda do texto */
+}
+
+/* Estilos da seção mapa */
+.mapa {
+    padding: 80px 12%;
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+.mapa-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Novo: Adicionando margem superior para espaçamento */
+}
+
+.mapa-wrapper iframe {
+    border: 0;
+    width: 940px;
+    height: 450px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Estilos do rodapé */
+.rodapé {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px 10%;
+    text-align: center;
+}
+
+.rodapé h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.rodapé p {
+    margin-bottom: 30px;
+}
+
+.lista-rodapé {
+    display: flex;
+    justify-content: space-between;
+}
